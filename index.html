@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!--This is about google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--This is about Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--This is about Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--This is about Booking Section-->
+    <main class="main-content container">
+        <div class="booking-form" id="bookingForm">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="">Departure</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="number" id="firstClassTicketInput" value="0" name="">
+                </div>
+                <div class="plus-minus-btn">
+                    <button onclick="handleTicket('firstClass',true)"><i class="fa fa-plus"></i></button>
+                    <button onclick="handleTicket('firstClass',false)"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input class="inp-style inp-width" type="number" id="economyTicketInput" value="0" name="">
+                </div>
+                <div class="plus-minus-btn">
+                    <button onclick="handleTicket('economy',true)"><i class="fa fa-plus"></i></button>
+                    <button onclick="handleTicket('economy',false)"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="subtotalTicketPrice">0</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="ticketTax">0</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="totalTicketPrice">0</span></p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style" onclick="handleBookNow()">Book Now</button>
+        </div>
+        <div class="booking-content" id="bookingContent">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti consectetur optio maxime amet deserunt officia minima eius mollitia fuga, corporis, quo tenetur beatae voluptas illum, alias aut. Iste asperiores, quasi sapiente inventore quibusdam fugit facere temporibus id neque necessitatibus iure consequatur consectetur explicabo consequuntur odio fugiat deserunt exercitationem! Quas, minus!</p>
+        </div>
+            <!--This is about ticket successful message-->
+            <div class="confirmed-message" id="successMessage">
+            <h1>Your booking is has been successful.</h1>
+            <h1>You are welcome again here and Thank you.</h1>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <!--Thank you so much-->
+</body>
+</html>
